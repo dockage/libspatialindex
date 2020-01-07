@@ -18,10 +18,26 @@ cd libspatialindex
 docker build --tag="$USER/libspatialindex" .
 ```
 
-**Note:** this docker image doesn't contain any C++ build tools (e.g. g++, cmake, ...). So, you need to install them manually.
+**Note:** this docker image doesn't contain any C++ compiler and build tools (e.g. g++, cmake, ...). So, you need to install them manually.
+
+## Quickstart
+
+Install C++ compiler:
+
+```
+# apk --no-cache --update add g++
+```
 
 GCC compiler flag:
 
 ```
 # g++ sample.cc -lspatialindex
+```
+
+or install C++ compiler and build tools your Docker file and then compile your project:
+
+```
+FROM dockage/libspatialindex:latest
+RUN apk --no-cache --update add g++ cmake make
+RUN cd /code/ && cmake . && make -j8
 ```
