@@ -10,7 +10,7 @@ steps:
         from_secret: DOCKER_USERNAME
       password:
         from_secret: DOCKER_PASSWORD
-      repo: dockage/tor-privoxy
+      repo: dockage/libspatialindex
       tags:
         - 'latest'
 
@@ -23,7 +23,7 @@ steps:
     image: plugins/webhook
     settings:
       urls:
-        - https://hooks.microbadger.com/images/dockage/tor-privoxy/zyLLguzFpj9SWAZgKuR89hYgxzA=
+        - https://hooks.microbadger.com/images/dockage/libspatialindex/zyLLguzFpj9SWAZgKuR89hYgxzA=
 
 depends_on:
   - default
