@@ -41,3 +41,5 @@ FROM dockage/libspatialindex:latest
 RUN apk --no-cache --update add g++ cmake make
 RUN cd /code/ && cmake . && make -j8
 ```
+
+You can also build your project outside, and then put the compiled file inside the container. Then you don't need to install the related tools like compiler anymore.
