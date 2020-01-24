@@ -13,6 +13,6 @@ RUN apk --no-cache --update add g++ cmake make curl tar \
 	&& cmake . \
 	&& make -j8 \
 	&& make install \
-	&& cd ..
+	&& cd .. \
 	&& rm -rf spatialindex-src-1.9.3* \
 	&& apk del g++ cmake make curl tar
